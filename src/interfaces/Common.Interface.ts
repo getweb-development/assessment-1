@@ -3,7 +3,6 @@ export class Device {
   _rev: string;
   doctype: string;
   serialNumber: string;
-  name: string;
   nextChecks: NextCheckValue[];
   type: string;
   assignedTo: AssignedValue;
@@ -11,7 +10,6 @@ export class Device {
   inventoryNumber: string;
   constructor(
     serialNumber = '',
-    name = '',
     nextChecks: NextCheckValue[] = [],
     type = '',
     assignedTo = { user: '', userGroup: '', customer: '', type: '' },
@@ -21,7 +19,6 @@ export class Device {
     this._id = '';
     this._rev = '';
     this.doctype = 'device';
-    this.name = name;
     this.nextChecks = nextChecks;
     this.type = type;
     this.assignedTo = assignedTo;
